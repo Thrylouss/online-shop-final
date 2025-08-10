@@ -1,0 +1,48 @@
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import { Navigation, Pagination } from 'swiper/modules';
+import ProdSlide from './ProdSlide.jsx';
+
+export default function Slides({ onSelect, info }) {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    // ✅ Генерируем заглушки, если картинок меньше 4
+    const slidesWithPlaceholders = [...info];
+    while (slidesWithPlaceholders.length < 4) {
+        slidesWithPlaceholders.push({ image: "/placeholder.jpg" }); // ✅ Путь к заглушке
+    }
+
+    return (
+        <div className="slider-container">
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={5} // ✅ Уменьшили базовый отступ
+                slidesPerView={4} // ✅ По умолчанию 4 слайда
+                navigation
+                pagination={{ clickable: true }}
+                style={{ width: "100%" }} // ✅ Фиксируем ширину
+                breakpoints={{
+                    320: { slidesPerView: 4, spaceBetween: 3 }, // ✅ 4 слайда, минимальный отступ
+                    480: { slidesPerView: 4, spaceBetween: 5 }, // ✅ 4 слайда, чуть больше отступ
+                    768: { slidesPerView: 4, spaceBetween: 8 }, // ✅ 4 слайда, нормальный отступ
+                    1024: { slidesPerView: 4, spaceBetween: 10 } // ✅ 4 слайда, оптимальный отступ
+                }}
+            >
+                {slidesWithPlaceholders.map((slide, index) => (
+                    <SwiperSlide key={index} className="prodslide">
+                        <div onClick={() => setActiveIndex(index)}>
+                            <ProdSlide
+                                index={index}
+                                selected={activeIndex}
+                                setSel={setActiveIndex}
+                                func={onSelect}
+                                img={slide.image}
+                            />
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+}

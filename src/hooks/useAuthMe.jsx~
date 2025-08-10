@@ -1,0 +1,40 @@
+import { useState, useEffect, useCallback } from 'react';
+import axios from 'axios';
+import API_BASE_URL from "../apiConfig.js";
+
+const useAuthMe = () => {
+    const [userMe, setUserMe] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const token = localStorage.getItem('token');
+
+    const fetchUserMe = useCallback(async () => {
+        if (!token) {
+            setUserMe(null);
+            setLoading(false);
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const response = await axios.get(`${API_BASE_URL}/auth/users/me/`, {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            setUserMe(response.data);
+            setError(null); // если нужно очистить предыдущее состояние ошибки
+        } catch (err) {
+            // Не выводим ошибку в консоль
+            setError(err);
+        } finally {
+            setLoading(false);
+        }
+    }, [token]);
+
+    useEffect(() => {
+        fetchUserMe();
+    }, [fetchUserMe]);
+
+    return { userMe, loading, error, refetch: fetchUserMe };
+};
+
+export default useAuthMe;

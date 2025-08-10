@@ -1,0 +1,122 @@
+.basket {
+    padding: 30px 0 50px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__prods {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__total {
+        width: 360px;
+        border-radius: 16px;
+        background: var(--white);
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-title {
+            font-family: 'NeoM';
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 21.6px;
+
+
+        }
+
+        &-desc {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            &__text {
+                font-family: 'NeoM';
+                font-size: 24px;
+                font-weight: 600;
+
+
+            }
+
+            &__old {
+                font-family: "NeoR";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                text-decoration: line-through;
+                color: #FF222A;
+
+            }
+        }
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-categ {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 24px 0;
+            border-top: 1px #E8E8E8 solid;
+            border-bottom: 1px #E8E8E8 solid;
+
+            &__text {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                font-family: "NeoR";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+
+                & span {
+                    font-family: 'NeoM';
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 19.2px;
+                }
+
+            }
+        }
+
+        &-btn {
+            font-family: 'NeoR';
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 21.6px;
+            outline: none;
+            color: var(--white);
+            width: 100%;
+            background: var(--primary-color);
+            padding: 11px 0;
+            text-align: center;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .basket {
+        &__wrap {
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+
+        &__total {
+            width: 100%;
+        }
+    }
+}

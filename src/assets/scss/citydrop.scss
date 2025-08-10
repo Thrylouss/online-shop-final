@@ -1,0 +1,37 @@
+.citydrop {
+    user-select: none;
+    position: relative;
+
+    &-button {
+        padding: 24px 30px;
+        font-family: 'GPR';
+        background: var(--white);
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+    }
+
+    &-list {
+        margin-top: 5px;
+        background: var(--white);
+        border-radius: 10px;
+        max-height: 300px;
+        position: absolute;
+        width: 100%;
+        overflow: scroll;
+        z-index: 10000;
+
+        &__element {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding: 24px 30px;
+            font-family: 'GPR';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.75px;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+import React, { useState } from 'react'
+import locate from '../img/locateIcon.svg'
+import inst from '../img/instagram.png'
+import fb from '../img/facebook.png'
+import tg from '../img/telegram.png'
+import menu from '../img/menu.png'
+import search from '../img/search.png'
+import acc from '../img/account.png'
+import basket from '../img/basket.png'
+import { Link } from 'react-router'
+import srch from '../img/searchLupa.svg'
+import men from '../img/men.svg'
+import ChooseLang from './tools/ChooseLang'
+import close from '../img/iks.svg'
+import useAuthMe from "../../hooks/useAuthMe.jsx";
+
+
+export default function Header({ state, func }) {
+    const [isSearch, setIsSearch] = useState(false)
+
+    const { userMe } = useAuthMe();
+
+    return (
+        <div className='header' data-aos='fade-down'>
+            <div className="header__wrap">
+                <div className="header__top">
+                    <div className="container">
+                        <div className="header__top-wrap">
+                            <div className="header__top-locate">
+                                <img src={locate} alt="" />
+                                <p className='header__top-locate__text'>Uzbekiston:</p>
+                                <span className='header__top-locate__span'>Toshkent</span>
+                            </div>
+                            <div className="header__top-nav">
+                                <div className="header__top-nav__links">
+                                    <a href="#"><img src={inst} alt="" /></a>
+                                    <a href="#"><img src={fb} alt="" /></a>
+                                    <a href="#"><img src={tg} alt="" /></a>
+                                </div>
+                                <div className="header__top-nav__number">
+                                    <a className='header__top-nav__number-link' href='tel:+998 99 199 99 96'>+998 99 199 99 96</a>
+                                </div>
+                                <ChooseLang />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="header__main">
+                    <div className="container">
+                        <div className="header__main-wrap">
+                            {isSearch ? (<input type="text" className='header__main-inp' />) : <Link className='link' to='/'><h2 className='header__main-logo'>Logo company</h2></Link>}
+
+                            <div className="header__main-center">
+
+                                <Link to='/products' className='link'>
+                                    <div className="header__main-center__categories">
+                                        <img src={menu} alt="" />
+                                        <p className="header__main-center__categories-text"> Kategoriya</p>
+
+                                    </div>
+                                </Link>
+
+                                <div className="header__main-center__search">
+                                    <input type="text" className='header__main-center__search-input' placeholder='Qidirish' />
+
+                                    <button className='header__main-center__search-button'><img src={search} alt="" /></button>
+                                </div>
+
+                            </div>
+                            <div className="header__main-nav">
+
+
+                                <Link className='link' to='/account/profile'>
+                                    <div className="header__main-nav__elem">
+                                        <img src={acc} alt="" />
+                                        <p className='header__main-nav__elem-text'>
+                                            {userMe ? userMe.name : 'Profil'}
+                                        </p>
+                                    </div>
+                                </Link>
+
+                                <Link className='link' to='/cart'>
+                                    <div className="header__main-nav__elem">
+                                        <img src={basket} alt="" />
+                                        <p className='header__main-nav__elem-text'>Savatcha</p>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className="header__main-adaptive">
+                                <button onClick={() => {
+                                    setIsSearch(true)
+                                    func(false)
+                                }} className='header__main-adaptive__btn'>
+                                    <img src={srch} alt="" />
+                                </button>
+                                <button className='header__main-adaptive__btn'>
+
+                                    {state || isSearch ? (
+                                        <img src={close} alt="" onClick={() => {
+                                            func(false)
+                                            setIsSearch(false)
+                                        }} />
+                                    ) : (<img src={men} alt="" onClick={() => {
+                                        func(true)
+                                    }} />)}
+
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    )
+}

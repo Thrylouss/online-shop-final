@@ -1,0 +1,108 @@
+.products {
+    padding: 80px 0 50px;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &-title {
+            font-family: 'NeoM';
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 36.01px;
+        }
+
+        &-txt {
+            display: flex;
+            gap: 10px;
+            transition: all ease-in-out 0.3s;
+            align-items: center;
+
+            &:hover {
+                & img {
+                    transform: translateX(3px);
+                }
+            }
+
+            & img {
+                transition: all linear 0.3s;
+            }
+        }
+
+        &-text {
+            font-family: 'NeoR';
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.6px;
+        }
+    }
+}
+
+// Мобильные устройства (до 480px)
+@media screen and (max-width: 480px) {
+    .products {
+        padding: 10px 0 20px;
+
+        &__wrap {
+            gap: 10px;
+        }
+
+        &__top {
+            &-title {
+                font-family: 'NeoR';
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19.2px;
+                letter-spacing: 0;
+            }
+
+            &-text {
+                font-family: 'NeoR';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16.8px;
+            }
+        }
+
+        &__main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+}
+
+@media screen and (max-width: 465px){
+    .products{
+        &__main{
+            gap: 10px;
+        }
+    }
+}
+
+// Очень маленькие экраны (до 360px)
+@media screen and (max-width: 410px) {
+    .products {
+        &__main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: start;
+        }
+
+
+
+    }
+}

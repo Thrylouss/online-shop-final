@@ -1,0 +1,32 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import API_BASE_URL from "../apiConfig.js";
+
+const useOrders = () => {
+    const [orders, setOrders] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchOrders = async () => {
+            setLoading(true);
+            try {
+                const response = await axios.get(`${API_BASE_URL}/orders/`, {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                });
+                setOrders(response.data); // Или response.data.results — проверь API!
+            } catch (error) {
+                setOrders([]); // Очищаем список заказов при ошибке
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchOrders();
+    }, []); // Теперь `useEffect` выполняется при изменении `status`
+
+    return { orders, loading, error };
+};
+
+export default useOrders;

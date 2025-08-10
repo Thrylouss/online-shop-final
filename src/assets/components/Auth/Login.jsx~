@@ -1,0 +1,66 @@
+import React, { useEffect, useState } from 'react'
+import Input from '../AcountInput.jsx'
+import '../../scss/create.scss'
+import API_BASE_URL from "../../../apiConfig.js";
+import { useTranslation } from 'react-i18next';
+export default function Login({ title, setCurrent, setBack, phone, setPhone }) {
+
+    const { i18n, t } = useTranslation()
+
+    useEffect(() => {
+        // Move state-setting calls here
+        setBack(false)
+        title(t("enterPhoneNumber"))
+        // If you're *already* on the 'create' route, setCurrent('create') might be redundant
+        // setCurrent('create')
+    }, [])
+
+    const handleRegister = async () => {
+        try {
+            // Удаляем пробелы и/или формируем правильный формат, если нужно
+            // Например, если phone = "+998 90 123 45 67", можете оставить как есть
+            // или убрать пробелы:
+            let cleanPhone = phone.replace(/\s/g, "")
+            if (cleanPhone.startsWith("+")) {
+                cleanPhone = cleanPhone.slice(1);
+            }
+
+            // Отправляем запрос на бекенд
+            const response = await fetch(`${API_BASE_URL}/auth/send-code/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: cleanPhone })
+            })
+
+            if (!response.ok) {
+                // Ошибка со стороны сервера
+                const errorData = await response.json()
+                alert(`Ошибка: ${errorData.error || 'Неизвестная ошибка'}`)
+                return
+            }
+
+            const data = await response.json()
+            // Если всё успешно
+            // console.log('Ответ от сервера:', data)
+            setPhone(cleanPhone)
+            // Меняем состояние (например, переходим на страницу ввода кода)
+            setCurrent('code')
+
+        } catch (error) {
+            console.error('Ошибка при отправке запроса:', error)
+        }
+    }
+
+    return (
+        <div className="create__wrap" >
+            <div className="create__input">
+                <p className='create__input-text' >{t("tel")} <span>{t("codeSendViaTgBot")}</span></p>
+                <Input phone={phone} setPhone={setPhone} />
+            </div>
+            <button className='create__btn' onClick={handleRegister}> {t("login")}</button>
+            {/* <p className='create__text'>Akkauntingiz bormi? <span onClick={()=>{setCurrent('login')}} className='create__link' >Akkauntga kirish</span></p> */}
+        </div>
+
+
+    )
+}

@@ -1,0 +1,72 @@
+.categories {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'NeoM';
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36.01px;
+        padding: 20px 0 14px;
+
+
+    }
+
+    &__text {
+        font-family: 'NeoR';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+
+    }
+
+    &__txt {
+        &:hover {
+            & img {
+                transform: translateX(3px);
+            }
+        }
+
+        & img {
+            transition: all linear 0.3s;
+        }
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__wrap {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .categories {
+        &__title {
+            font-family: 'NeoR';
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19.2px;
+            letter-spacing: 0%;
+            padding: 20px 0 10px;
+        }
+
+        &__text {
+            font-family: 'NeoR';
+            font-weight: 400;
+            font-size: 14px;
+
+        }
+        &__wrap{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+    }
+}
