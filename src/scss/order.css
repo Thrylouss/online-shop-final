@@ -1,0 +1,297 @@
+@charset "UTF-8";
+.order {
+  /* По умолчанию .order__bottomadapt скрыт на десктопе */
+}
+.order__top {
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: 0.2s linear all;
+}
+.order__top:hover {
+  border: 1px solid var(--primary-color);
+}
+.order__status {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.order__status-text {
+  font-family: "NeoM";
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order__status-header {
+  font-family: "NeoM";
+  font-size: 30px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  align-items: center;
+}
+.order__info {
+  display: flex;
+  gap: 140px;
+  align-items: center;
+}
+.order__info-element {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.order__info-element__text {
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--gray);
+}
+.order__info-element__title {
+  display: flex;
+  gap: 20px;
+  font-family: "NeoM";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+.order__info-element__title-span {
+  font-family: "NeoM";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+.order__info-element__title-pricespan {
+  font-family: "NeoM";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: line-through;
+  color: var(--gray);
+}
+.order__bottom {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.order__bottom-prod {
+  border-bottom: 1px solid var(--border);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.order__bottom-desc {
+  display: flex;
+  gap: 24px;
+}
+.order__bottom-desc__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+.order__bottom-desc__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.order__bottom-desc__title {
+  display: flex;
+  gap: 16px;
+  font-family: "NeoM";
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 10px;
+}
+.order__bottom-desc__title span {
+  padding: 4px 10px;
+  font-family: "NeoB";
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--sale);
+  border-radius: 18px;
+  color: var(--white);
+}
+.order__bottom-desc__text {
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray);
+}
+.order__bottom-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+.order__bottom-price__title {
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gray);
+}
+.order__bottom-price__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "NeoM";
+  font-weight: 500;
+  font-size: 16px;
+}
+.order__bottom-price__text span {
+  color: var(--gray);
+  text-decoration: line-through;
+}
+.order__bottomadapt {
+  display: none;
+}
+
+/* ----------- Адаптивка до 480px ----------- */
+@media screen and (max-width: 480px) {
+  .order {
+    /* Прячем десктопный блок, показываем адаптивный */
+  }
+  .order__bottom {
+    display: none;
+  }
+  .order__bottomadapt {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .order__bottomadapt-prod {
+    display: flex;
+    align-items: center; /* Для вертикального выравнивания */
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    /* Можно подправить размеры картинки */
+  }
+  .order__bottomadapt-prod .order__bottom-desc__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .order__bottomadapt-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  .order__bottomadapt-desc__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .order__bottomadapt-desc__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "NeoM";
+    font-weight: 500;
+    font-size: 16px; /* уменьшили с 18px для мобильных */
+    /* ограничим ширину, чтобы не вылазило за края */
+    max-width: 100%;
+  }
+  .order__bottomadapt-desc__title span {
+    border-radius: 12px;
+    padding: 4px 8px;
+    background: var(--sale);
+    font-family: "NeoR";
+    font-weight: 700;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 13.2px;
+    letter-spacing: -0.32px;
+  }
+  .order__bottomadapt-desc__text {
+    font-family: "NeoR";
+    font-weight: 400;
+    font-size: 14px;
+    color: #616161;
+  }
+  .order__bottomadapt-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .order__bottomadapt-price__title {
+    font-family: "NeoR";
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--gray);
+  }
+  .order__bottomadapt-price__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: "NeoM";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .order__bottomadapt-price__text span {
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+  .order__wrap {
+    position: relative;
+  }
+  .order__info {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .order__info-btn {
+    position: absolute;
+    top: -60px;
+    right: 0;
+  }
+}
+/* ----------- Адаптивка до 440px ----------- */
+@media screen and (max-width: 440px) {
+  .order__bottomadapt-desc__title {
+    /* Можно убрать justify-content: space-between,
+       если нужно полностью «столбиком» */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+/* ----------- Адаптивка до 400px ----------- */
+@media screen and (max-width: 400px) {
+  .order__bottomadapt-desc__title {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 150px;
+  }
+}
+/* ----------- Адаптивка до 340px ----------- */
+@media screen and (max-width: 340px) {
+  .order__status {
+    gap: 5px;
+  }
+  .order__status-text, .order__status-header {
+    max-width: 190px;
+  }
+  .order__bottomadapt-desc__title {
+    max-width: 105px;
+  }
+}/*# sourceMappingURL=order.css.map */

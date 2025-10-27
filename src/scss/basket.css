@@ -1,0 +1,98 @@
+.basket {
+  padding: 30px 0 50px;
+}
+.basket__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basket__prods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.basket__total {
+  width: 360px;
+  border-radius: 16px;
+  background: var(--white);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.basket__total-title {
+  font-family: "NeoM";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 21.6px;
+}
+.basket__total-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.basket__total-desc__text {
+  font-family: "NeoM";
+  font-size: 24px;
+  font-weight: 600;
+}
+.basket__total-desc__old {
+  font-family: "NeoR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration: line-through;
+  color: #FF222A;
+}
+.basket__total-top {
+  display: flex;
+  justify-content: space-between;
+}
+.basket__total-categ {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px #E8E8E8 solid;
+  border-bottom: 1px #E8E8E8 solid;
+}
+.basket__total-categ__text {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "NeoR";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.basket__total-categ__text span {
+  font-family: "NeoM";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.2px;
+}
+.basket__total-btn {
+  font-family: "NeoR";
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 21.6px;
+  outline: none;
+  color: var(--white);
+  width: 100%;
+  background: var(--primary-color);
+  padding: 11px 0;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  .basket__wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+  .basket__total {
+    width: 100%;
+  }
+}/*# sourceMappingURL=basket.css.map */

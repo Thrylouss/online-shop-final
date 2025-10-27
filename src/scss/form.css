@@ -1,0 +1,109 @@
+.form {
+  background: var(--light-gray);
+  position: relative;
+}
+.form__wrap {
+  display: flex;
+  padding: 48px 0 80px;
+}
+.form__img img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.form__desc {
+  max-width: 472px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form__desc-txts__title {
+  font-family: "NeoM";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 82px;
+  letter-spacing: -0.05em;
+  color: var(--primary-color);
+}
+.form__desc-txts__text {
+  font-family: "NeoR";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+.form__desc-main {
+  max-width: 472px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__desc-main__inp {
+  padding: 24px 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-family: "GPR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+.form__desc-main__inp::-moz-placeholder {
+  font-family: "GPR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+.form__desc-main__inp::placeholder {
+  font-family: "GPR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+}
+.form__desc-main__btn {
+  padding: 24px;
+  color: var(--white);
+  font-family: "GPR";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: var(--primary-color);
+}
+
+@media screen and (max-width: 480px) {
+  .form__desc-main__inp {
+    font-size: 16px;
+  }
+  .form__desc-main__inp::-moz-placeholder {
+    font-size: 16px;
+  }
+  .form__desc-main__inp::placeholder {
+    font-size: 16px;
+  }
+  .form__desc-txts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form__desc-txts__title {
+    font-family: "NeoM";
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+  .form__desc-txts__text {
+    font-family: "NeoR";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+}
+@media screen and (max-width: 1620px) {
+  .form__img img {
+    width: 900px;
+  }
+}/*# sourceMappingURL=form.css.map */

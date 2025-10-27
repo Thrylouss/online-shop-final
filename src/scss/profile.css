@@ -1,0 +1,166 @@
+.profile__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.profile__info {
+  background: var(--white);
+  transition: all ease-in-out 0.2s;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile__info:hover {
+  border: 1px solid var(--primary-color);
+}
+.profile__info__top {
+  display: flex;
+  gap: 14px;
+}
+.profile__info__top-text {
+  font-family: "NeoM";
+  font-weight: 600;
+  font-size: 24px;
+}
+.profile__info__btm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.profile__info__btm-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.profile__info__btm-input__text {
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gray);
+}
+.profile__info__btm-input__num {
+  padding: 12px 20px;
+  border: var(--primary-color) 1px solid;
+  border-radius: 12px;
+  font-family: "NeoM";
+  font-weight: 600;
+  background: var(--body);
+  font-size: 16px;
+  color: var(--primary-color);
+}
+.profile__info__btm-input__wrap {
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border: var(--border) 1px solid;
+  background: var(--body);
+}
+.profile__info__btm-input__inp {
+  width: 100%;
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 45px;
+  color: var(--black);
+  border-radius: 12px;
+  padding: 12px 20px;
+  background: var(--body);
+  border: var(--border) 1px solid;
+  outline: none;
+}
+.profile__info__btm-input__tel {
+  width: 100%;
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  border: none;
+  padding: 12px 20px;
+  background: var(--body);
+  outline: none;
+}
+.profile__locate {
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--white);
+  transition: all ease-in-out 0.2s;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.profile__locate:hover {
+  border: 1px solid var(--primary-color);
+}
+.profile__locate__top {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.profile__locate__top-text {
+  font-family: "NeoM";
+  font-weight: 600;
+  font-size: 24px;
+}
+.profile__locate__btn {
+  font-family: "NeoR";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary-color);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 12px;
+}
+.profile__locate .profile__locate__btm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.profile__locate .profile__locate__btm div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+.profile__locate .profile__locate__btm .profile__info__btm-input__inp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #f9f9f9;
+  height: 100%;
+  min-height: 48px;
+}
+.profile__locate__btn:active {
+  cursor: pointer;
+  background-color: #778DA9;
+}
+
+@media screen and (max-width: 480px) {
+  .profile__info__btm {
+    display: flex;
+    flex-direction: column;
+  }
+  .city {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=profile.css.map */

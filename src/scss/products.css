@@ -1,0 +1,80 @@
+.products {
+  padding: 80px 0 50px;
+}
+.products__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.products__main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.products__top {
+  display: flex;
+  justify-content: space-between;
+}
+.products__top-title {
+  font-family: "NeoM";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36.01px;
+}
+.products__top-txt {
+  display: flex;
+  gap: 10px;
+  transition: all ease-in-out 0.3s;
+  align-items: center;
+}
+.products__top-txt:hover img {
+  transform: translateX(3px);
+}
+.products__top-txt img {
+  transition: all linear 0.3s;
+}
+.products__top-text {
+  font-family: "NeoR";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+@media screen and (max-width: 480px) {
+  .products {
+    padding: 10px 0 20px;
+  }
+  .products__wrap {
+    gap: 10px;
+  }
+  .products__top-title {
+    font-family: "NeoR";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 0;
+  }
+  .products__top-text {
+    font-family: "NeoR";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .products__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 465px) {
+  .products__main {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .products__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+  }
+}/*# sourceMappingURL=products.css.map */

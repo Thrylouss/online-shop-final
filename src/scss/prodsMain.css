@@ -1,0 +1,223 @@
+@charset "UTF-8";
+.main {
+  padding: 32px 0 96px;
+}
+.main__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.main__left {
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  width: 350px;
+}
+.main__left img {
+  border-radius: 20px;
+}
+.main__left-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main__left-filter__title {
+  font-family: "Neom";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--gray);
+}
+.main__left-filter__inputs {
+  display: flex;
+  gap: 6px;
+}
+.main__left-filter__inputs-inp {
+  /* Для Chrome, Safari, Edge */
+  padding: 14px 20px;
+  max-width: 174px;
+  outline: none;
+  border: none;
+  background: var(--white);
+  font-family: "GPR";
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  line-height: 22px;
+  color: var(--black);
+}
+.main__left-filter__inputs-inp::-moz-placeholder {
+  font-family: "GPR";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--gray);
+}
+.main__left-filter__inputs-inp::placeholder {
+  font-family: "GPR";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--gray);
+}
+.main__left-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.main__left-categories__title {
+  font-family: "NeoM";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.main__left-categories__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.main__left-categories__nav-elem {
+  display: flex;
+  justify-content: space-between;
+  color: var(--black);
+}
+.main__left-categories__nav-elem__text {
+  font-family: "NeoR";
+  color: var(--gray);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.main__products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main__products-pagination {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+}
+.main__products-pagination__num {
+  padding: 10px 20px;
+  font-family: "NeoM";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.main__products-pagination__btn {
+  padding: 15px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "GPR";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray);
+  background: var(--white);
+  outline: none;
+  border: none;
+}
+.main__products-btn {
+  padding: 16px 0;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "GPR";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray);
+  background: var(--white);
+  outline: none;
+  border: none;
+}
+.main__products-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 20px 0;
+  }
+  .main__products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main__products-btn {
+    display: none;
+  }
+  .main__products-pagination {
+    display: none;
+  }
+  .main__left {
+    display: none;
+  }
+  .main__left-categories {
+    display: none;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main__products-grid {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .main {
+    max-width: 100%;
+  }
+  .main__products-grid {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main {
+    max-width: 100%;
+  }
+  .main__products-grid {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .main__products-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .main__products-grid {
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .main__products-grid {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main__products-grid {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .main__products-grid {
+    max-width: 98%;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}/*# sourceMappingURL=prodsMain.css.map */
