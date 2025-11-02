@@ -9,7 +9,6 @@ const useCategories = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // ✅ useMemo нужен для отслеживания изменений языка
     const langParams = useMemo(() => withLang(), [i18n.language]);
 
     useEffect(() => {

@@ -1,7 +1,6 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
 import useAuthMe from "../hooks/useAuthMe.jsx";
-import '../assets/scss/loading.scss'
+import '../styles/scss/components/loading.scss'
 
 const ProtectedRoute = ({ children }) => {
     const { userMe, error, loading } = useAuthMe();
