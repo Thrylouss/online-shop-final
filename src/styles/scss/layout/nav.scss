@@ -12,7 +12,6 @@
         align-items: center;
 
         &-text {
-            font-family: 'GPR';
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
@@ -27,7 +26,6 @@
         &-btn {
             padding: 10px 20px;
             background: var(--white);
-            font-family: 'MV';
             font-size: 14px;
             font-weight: 400;
             line-height: 16px;
@@ -55,7 +53,6 @@
             align-items: center;
 
             &__title {
-                font-family: 'NeoM';
                 font-size: 32px;
                 font-weight: 600;
                 line-height: 38px;
@@ -75,7 +72,6 @@
 
             &__text {
                 padding: 10px 20px;
-                font-family: 'MV';
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 16px;
@@ -87,7 +83,6 @@
 
             &__discount {
                 padding: 10px 20px;
-                font-family: 'MV';
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 16px;
@@ -114,7 +109,6 @@
                     color: var(--white);
                 }
 
-                font-family: 'GPR';
                 transition: all ease-out 0.2s;
                 font-size: 13.18px;
                 font-weight: 400;
@@ -130,7 +124,6 @@
                         cursor: pointer;
                     }
 
-                    font-family: 'GPR';
                     transition: all ease-out 0.2s;
                     font-size: 13.18px;
                     font-weight: 400;
@@ -202,7 +195,6 @@
                 }
 
                 &__title {
-                    font-family: 'NeoM';
                     font-size: 18px;
                     font-weight: 500;
                     white-space: nowrap;
@@ -212,10 +204,8 @@
                 }
 
                 &__text {
-                    font-family: 'NeoR';
                     font-size: 14px;
                     font-weight: 400;
-                    // border: var(--border) 1px solid;
                     padding: 8px 10px;
                 }
 
@@ -268,7 +258,6 @@
                 gap: 6px;
 
                 &__title {
-                    font-family: 'NeoM';
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -280,7 +269,6 @@
                 }
 
                 &__text {
-                    font-family: 'NeoR';
                     padding: 8px 10px;
                     font-weight: 400;
                     font-size: 12px;

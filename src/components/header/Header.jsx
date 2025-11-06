@@ -10,9 +10,9 @@ import telegram from "../../assets/img/telegram.svg";
 import search from "../../assets/img/search.svg";
 import account from "../../assets/img/account.svg";
 import smallBasket from "../../assets/img/smallBasket.svg";
-// import search from "../../assets/img/searchLupa.svg";
+import searchLupa from "../../assets/img/searchLupa.svg";
 import hamburger from "../../assets/img/menu.svg";
-import chooseLang from "../tools/ChooseLang.jsx";
+import ChooseLang from "../tools/ChooseLang.jsx";
 import close from "../../assets/img/closeIcon.svg";
 
 export default function Header({ st, sfunc, state, func }) {
@@ -56,7 +56,7 @@ export default function Header({ st, sfunc, state, func }) {
                     +998 99 199 99 96
                   </a>
                 </div>
-                <chooseLang />
+                <ChooseLang />
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Header({ st, sfunc, state, func }) {
                   />
 
                   <button className="header__main-center__search-button">
-                    <img src={search} alt="search" />
+                    <img src={searchLupa} alt="search" />
                   </button>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function Header({ st, sfunc, state, func }) {
 
                 <Link className="link" to="/cart">
                   <div className="header__main-nav__elem">
-                    <img src={basket} alt="basket icon" />
+                    <img src={smallBasket} alt="basket icon" />
                     <p className="header__main-nav__elem-text">{t("cart")}</p>
                     {count != 0 ? (
                       <div className="header__main-nav__elem-span">{count}</div>
@@ -138,7 +138,7 @@ export default function Header({ st, sfunc, state, func }) {
                   }}
                   className="header__main-adaptive__btn"
                 >
-                  <img src={search} alt="basket-icon" />
+                  <img src={smallBasket} alt="basket-icon" />
                 </button>
                 <button className="header__main-adaptive__btn">
                   {state || st ? (

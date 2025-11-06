@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Map from "../tools/Map";
 import Form from "../Form/Form";
 import logo from "../../assets/img/logo.svg";
-import instagram from "../../assets/img/insta.svg";
+import instagram from "../../assets/img/instagram.svg";
 import facebook from "../../assets/img/fb.svg";
 import telegram from "../../assets/img/telg.svg";
 import youtube from "../../assets/img/yout.svg";
@@ -11,6 +11,10 @@ import call from "../../assets/img/call.svg";
 import appStore from "../../assets/img/appstore.svg";
 import playMarket from "../../assets/img/pm.svg";
 import "../../styles/scss/layout/footer.scss";
+import { FaFacebookF, FaTelegramPlane } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
+import { AiFillYoutube } from "react-icons/ai";
+import { RiTelegram2Fill } from "react-icons/ri";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -24,10 +28,32 @@ export default function Footer() {
               <div className="footer__left">
                 <div className="footer__titles">
                   <div className="footer__titles-media">
-                    <img src={instagram} alt="social-icons" />
-                    <img src={facebook} alt="social-icons" />
-                    <img src={telegram} alt="social-icons" />
-                    <img src={youtube} alt="social-icons" />
+                    <a data-social="Instagram" style={{"--accent-color": "#FF0069"}} href="https://www.instagram.com/">
+                      <IoLogoInstagram  />
+                    </a>
+                    <a
+                    data-social="Facebook"
+                    style={{"--accent-color":"#0866FF"}}
+                      href="https://www.facebook.com/profile.php?id=61566515812935"
+                      target="_blank"
+                    >
+                      <FaFacebookF  />
+                    </a>
+
+                    <a 
+                    data-social="Telegram"
+                     style={{"--accent-color": "#26A5E4"}}
+                    href="https://t.me/@fromMrX" target="_blank">
+                      <FaTelegramPlane  />
+                    </a>
+                    <a
+                    data-social="Youtube "
+                     style={{"--accent-color": "#FF0000"}}
+                      href="https://www.youtube.com/watch?v=8JW3PvhUmb4&list=RD9Eg7iBWqEFg&index=3"
+                      target="_blank"
+                    >
+                      <AiFillYoutube  />
+                    </a>
                   </div>
                   <h2 className="footer__titles-text">{t("information")}</h2>
                 </div>

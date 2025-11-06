@@ -11,6 +11,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+       
     }
 
     &__top {
@@ -18,7 +19,6 @@
         justify-content: space-between;
 
         &-title {
-            font-family: 'NeoM';
             font-size: 30px;
             font-weight: 600;
             line-height: 36.01px;

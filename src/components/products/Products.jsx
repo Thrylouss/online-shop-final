@@ -17,6 +17,8 @@ export default function Products({ title }) {
   }
 
   return (
+    <div className="container">
+
     <div className="products">
       <div className="products__wrap">
         <div className="products__top">
@@ -26,7 +28,7 @@ export default function Products({ title }) {
               <p className="products__top-text">{t("all")}</p>
             </Link>
 
-            <img src={arrowR} alt="" />
+            <img src={arrowR} alt="arrow icon" />
           </div>
         </div>
         <div className="products__main">
@@ -36,5 +38,7 @@ export default function Products({ title }) {
         </div>
       </div>
     </div>
+    </div>
+
   );
 }

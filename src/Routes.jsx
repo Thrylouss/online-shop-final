@@ -1,13 +1,5 @@
-import {
-  Account,
-  Basket,
-  Home,
-  NotFoundPage,
-  Products,
-  SingleProduct,
-} from "./pages";
-import ProtectedRoute from "./context/ProtectedRoute"
-import Auth from "./auth/Auth"
+
+
 const routes = [
   { path: "/", element: <Home />, name: "Home" },
   { path: "/products", element: <Products />, name: "Products" },

@@ -24,7 +24,6 @@
         gap: 24px;
 
         &-title {
-            font-family: 'NeoM';
             font-size: 24px;
             font-weight: 600;
             line-height: 21.6px;
@@ -38,7 +37,6 @@
             align-items: end;
 
             &__text {
-                font-family: 'NeoM';
                 font-size: 24px;
                 font-weight: 600;
 
@@ -46,7 +44,6 @@
             }
 
             &__old {
-                font-family: "NeoR";
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
@@ -73,13 +70,11 @@
                 display: flex;
                 justify-content: space-between;
                 gap: 20px;
-                font-family: "NeoR";
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
 
                 & span {
-                    font-family: 'NeoM';
                     font-size: 14px;
                     font-weight: 600;
                     line-height: 19.2px;
@@ -89,7 +84,6 @@
         }
 
         &-btn {
-            font-family: 'NeoR';
             font-size: 16px;
             font-weight: 200;
             line-height: 21.6px;

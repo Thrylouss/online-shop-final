@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CodeInput from './CodeInput';
-import '../../scss/code.scss';
+import '../styles/scss/vendors/code.scss';
 import { useNavigate } from 'react-router-dom';
-import API_BASE_URL from '../../../apiConfig.js';
+import API_BASE_URL from '../apiConfig.js';
 import { useTranslation } from 'react-i18next';
 export default function Code({ title, setCurrent, setBack, phone, fullName }) {
     const [code, setCode] = useState(Array(6).fill(""));

@@ -111,7 +111,7 @@ export default function ProdsMain({
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={!nextPage}
             >
-              <img src={arrowRblack} alt="" />
+              <img src={arrowRblack} alt="arrow-icon" />
             </button>
           </div>
         </div>

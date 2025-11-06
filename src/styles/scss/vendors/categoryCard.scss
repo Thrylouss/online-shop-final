@@ -1,92 +1,89 @@
 .card {
-    height: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  border-radius: 6px;
+  background: var(--light-gray);
+  max-width: 350px;
+  height: 245px;
+  width: 100%;
+  flex-shrink: 0;
+
+  &__wrap {
+    width: 100%;
     display: flex;
-    align-items: end;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__img {
+    width: 100%;
     border-radius: 6px;
-    background: var(--light-gray);
-    max-width: 350px;
+    max-width: 200px;
+    max-height: 200px;
+  }
 
-    &__wrap {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+  &__desc {
+    padding: 34px 0 24px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-title {
+       width: 100px;
+    font-size: 20px;
+      z-index: 1000;
+      font-weight: 500;
+      color: var(--primary-color);
+      line-height: 100%;
+      letter-spacing: 0%;
+
+      
     }
 
-    &__image {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
+    &-text {
+      z-index: 1000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
     }
-
-    &__img {
-        width: 100%;
-        border-radius: 6px;
-        max-width: 200px;
-        max-height: 200px;
-    }
-
-    &__desc {
-        padding: 34px 0 24px 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 108px;
-
-        &-title {
-            font-family: 'NeoM';
-            font-size: 20px;
-            z-index: 1000;
-            font-weight: 500;
-            line-height: 24px;
-            color: var(--primary-color);
-
-        }
-
-        &-text {
-            font-family: 'NeoR';
-            z-index: 1000;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16.8px;
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .card {
-
-        &__image {
-            position: relative;
-
-        }
-
-        &__img {
-            position: absolute;
-            right: 0;
-            z-index: 10;
-            width: 100px;
-        }
-
-        &__desc {
-            &-title {
-                font-family: 'NeoM';
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 16.8px;
-
-            }
-
-            &-text {
-                font-family: 'NeoR';
-                font-weight: 400;
-                font-size: 10px;
-                line-height: 14px;
-                max-width: 50%;
-
-            }
-
-            padding: 10px;
-
-        }
+  .card {
+    &__image {
+      position: relative;
     }
+
+    &__img {
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      width: 100px;
+    }
+
+    &__desc {
+      &-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        max-width: 50%;
+      }
+
+      padding: 10px;
+    }
+  }
 }

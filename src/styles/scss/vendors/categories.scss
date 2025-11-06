@@ -6,11 +6,10 @@
     }
 
     &__title {
-        font-family: 'NeoM';
         font-size: 30px;
         font-weight: 600;
         line-height: 36.01px;
-        padding: 20px 0 14px;
+        margin-bottom: 16px;
 
 
     }
@@ -49,7 +48,6 @@
 @media screen and (max-width:480px) {
     .categories {
         &__title {
-            font-family: 'NeoR';
             font-weight: 600;
             font-size: 16px;
             line-height: 19.2px;

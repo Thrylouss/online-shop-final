@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Input from '../components/AcountInput.jsx'
-import '../../scss/create.scss'
-import API_BASE_URL from "../../../apiConfig.js";
+import AcountInput from "../components/inputs/AcountInput.jsx"
+import '../styles/scss/vendors/create.scss'
+import API_BASE_URL from "../apiConfig.js";
 import { useTranslation } from 'react-i18next';
 export default function Login({ title, setCurrent, setBack, phone, setPhone }) {
 
@@ -55,7 +55,7 @@ export default function Login({ title, setCurrent, setBack, phone, setPhone }) {
         <div className="create__wrap" >
             <div className="create__input">
                 <p className='create__input-text' >{t("tel")} <span>{t("codeSendViaTgBot")}</span></p>
-                <Input phone={phone} setPhone={setPhone} />
+                <AcountInput phone={phone} setPhone={setPhone} />
             </div>
             <button className='create__btn' onClick={handleRegister}> {t("login")}</button>
             {/* <p className='create__text'>Akkauntingiz bormi? <span onClick={()=>{setCurrent('login')}} className='create__link' >Akkauntga kirish</span></p> */}
