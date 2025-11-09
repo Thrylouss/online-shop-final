@@ -7,14 +7,13 @@ import facebook from "../../assets/img/fb.svg";
 import telegram from "../../assets/img/telg.svg";
 import youtube from "../../assets/img/yout.svg";
 import qrCode from "../../assets/img/qr.svg";
-import call from "../../assets/img/call.svg";
+import telephone from "../../assets/img/smallCallIcon.svg";
 import appStore from "../../assets/img/appstore.svg";
 import playMarket from "../../assets/img/pm.svg";
 import "../../styles/scss/layout/footer.scss";
 import { FaFacebookF, FaTelegramPlane } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { AiFillYoutube } from "react-icons/ai";
-import { RiTelegram2Fill } from "react-icons/ri";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -28,75 +27,83 @@ export default function Footer() {
               <div className="footer__left">
                 <div className="footer__titles">
                   <div className="footer__titles-media">
-                    <a data-social="Instagram" style={{"--accent-color": "#FF0069"}} href="https://www.instagram.com/">
-                      <IoLogoInstagram  />
+                    <a
+                      data-social="Instagram"
+                      style={{ "--accent-color": "#FF0069" }}
+                      href="https://www.instagram.com/"
+                    >
+                      <IoLogoInstagram />
                     </a>
                     <a
-                    data-social="Facebook"
-                    style={{"--accent-color":"#0866FF"}}
+                      data-social="Facebook"
+                      style={{ "--accent-color": "#0866FF" }}
                       href="https://www.facebook.com/profile.php?id=61566515812935"
                       target="_blank"
                     >
-                      <FaFacebookF  />
+                      <FaFacebookF />
                     </a>
 
-                    <a 
-                    data-social="Telegram"
-                     style={{"--accent-color": "#26A5E4"}}
-                    href="https://t.me/@fromMrX" target="_blank">
-                      <FaTelegramPlane  />
+                    <a
+                      data-social="Telegram"
+                      style={{ "--accent-color": "#26A5E4" }}
+                      href="https://t.me/@fromMrX"
+                      target="_blank"
+                    >
+                      <FaTelegramPlane />
                     </a>
                     <a
-                    data-social="Youtube "
-                     style={{"--accent-color": "#FF0000"}}
+                      data-social="Youtube "
+                      style={{ "--accent-color": "#FF0000" }}
                       href="https://www.youtube.com/watch?v=8JW3PvhUmb4&list=RD9Eg7iBWqEFg&index=3"
                       target="_blank"
                     >
-                      <AiFillYoutube  />
+                      <AiFillYoutube />
                     </a>
                   </div>
-                  <h2 className="footer__titles-text">{t("information")}</h2>
                 </div>
                 <div className="footer__btm">
                   <img className="footer__btm-qr" src={qrCode} alt="qr icon" />
-                  <div className="footer__btm-el">
-                    <div className="footer__btm-el__list">
-                      <a href="#" className="footer__btm-el__list-item">
-                        В магазин
-                      </a>
-                      <a href="#" className="footer__btm-el__list-item">
-                        Связаться с нами!
-                      </a>
-                      <a href="#" className="footer__btm-el__list-item">
-                        Возврат товара
-                      </a>
-                      <a href="#" className="footer__btm-el__list-item">
-                        Гарантия на товары
-                      </a>
-                    </div>
-                    <a href="tel:+998991999996">
-                      <div className="footer__btm-el__tel">
-                        <img src={call} alt="call-icon" />
-                        <span>99</span>
-                        199 99 96
-                      </div>
-                    </a>
-                  </div>
                 </div>
               </div>
-              <div className="footer__btm-app">
-                <a href="#">
-                  <div className="footer__btm-app__el">
-                    <img src={appStore} alt="appstore icon" />
-                    <p className="footer__btm-app__el-text">AppStore</p>
-                  </div>
+              <div className="contact-info">
+                <h3>Информация</h3>
+                <p>В магазин</p>
+                <p>Связаться с нами!</p>
+                <p>Возврат товара</p>
+                <p>Гарантия на товары</p>
+                <a href="tel:+998999999996" className="call-btn">
+                  <img src={telephone} alt="phone icon" />
+                  <span> +998 99 999 99 96</span>
                 </a>
-                <a href="#">
-                  <div className="footer__btm-app__el">
-                    <img src={playMarket} alt="appstore" />
-                    <p className="footer__btm-app__el-text">Google Play</p>
-                  </div>
-                </a>
+              </div>
+              <div className="phone-info">
+                <h3>Информация</h3>
+                <p>В магазин</p>
+                <p>Связаться с нами!</p>
+                <p>Возврат товара</p>
+                <p>Гарантия на товары</p>
+                <div className="play-store-market">
+                  <a
+                    href={"https://www.apple.com/app-store/"}
+                    target="_blank"
+                    className="appStore-btn"
+                  >
+                    <img src={appStore} alt="App Store" className="app-icon" />
+                    <span>AppStore</span>
+                  </a>
+                  <a
+                    href={"https://play.google.com/"}
+                    target="_blank"
+                    className="playMarket-btn"
+                  >
+                    <img
+                      src={playMarket}
+                      alt="play Market"
+                      className="app-icon"
+                    />
+                    <span>Google Play</span>
+                  </a>
+                </div>
               </div>
             </div>
 

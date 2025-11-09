@@ -7,14 +7,14 @@ import locate from "../../assets/img/locateIcon.svg";
 import instagram from "../../assets/img/instagram.svg";
 import facebook from "../../assets/img/facebook.svg";
 import telegram from "../../assets/img/telegram.svg";
-import search from "../../assets/img/search.svg";
 import account from "../../assets/img/account.svg";
 import smallBasket from "../../assets/img/smallBasket.svg";
 import searchLupa from "../../assets/img/searchLupa.svg";
 import hamburger from "../../assets/img/menu.svg";
 import ChooseLang from "../tools/ChooseLang.jsx";
 import close from "../../assets/img/closeIcon.svg";
-
+import CatalogMenu from "../catalog-button/Catalogbutton.jsx";
+import "../../styles/scss/layout/header.scss"
 export default function Header({ st, sfunc, state, func }) {
   const { t } = useTranslation();
   const { userMe } = useAuthMe();
@@ -73,14 +73,7 @@ export default function Header({ st, sfunc, state, func }) {
               )}
 
               <div className="header__main-center">
-                <Link to="/products" className="link">
-                  <div className="header__main-center__categories">
-                    <img src={hamburger} alt="hamburger-icon" />
-                    <p className="header__main-center__categories-text">
-                      {t("categ")}
-                    </p>
-                  </div>
-                </Link>
+                  <CatalogMenu />
 
                 <div className="header__main-center__search">
                   <input
