@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import useBasket from "../../hooks/useBasket.jsx";
 import useAuthMe from "../../hooks/useAuthMe.jsx";
 import locate from "../../assets/img/locateIcon.svg";
-import instagram from "../../assets/img/instagram.svg";
-import facebook from "../../assets/img/facebook.svg";
-import telegram from "../../assets/img/telegram.svg";
+import instagram from "../../assets/img/header-instagram-icon.svg";
+import facebook from "../../assets/img/header-facebook-icon.svg";
+import telegram from "../../assets/img/header-telegram-icon.svg";
 import account from "../../assets/img/account.svg";
 import smallBasket from "../../assets/img/smallBasket.svg";
 import searchLupa from "../../assets/img/searchLupa.svg";
@@ -15,6 +15,7 @@ import ChooseLang from "../tools/ChooseLang.jsx";
 import close from "../../assets/img/closeIcon.svg";
 import CatalogMenu from "../catalog-button/Catalogbutton.jsx";
 import "../../styles/scss/layout/header.scss"
+import { Facebook, Instagram } from "lucide-react";
 export default function Header({ st, sfunc, state, func }) {
   const { t } = useTranslation();
   const { userMe } = useAuthMe();
@@ -39,13 +40,13 @@ export default function Header({ st, sfunc, state, func }) {
               <div className="header__top-nav">
                 <div className="header__top-nav__links">
                   <a href="#">
-                    <img src={instagram} alt="instagran-icon" />
+                <img src={instagram} alt="instagram-icon" />
                   </a>
                   <a href="#">
-                    <img src={facebook} alt="facebook-icon" />
+                  <img src={facebook} alt="facebook-icon" />
                   </a>
                   <a href="#">
-                    <img src={telegram} alt="telegram-icon" />
+                   <img src={telegram} alt="telegram-icon" />
                   </a>
                 </div>
                 <div className="header__top-nav__number">

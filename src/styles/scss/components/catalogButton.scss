@@ -10,6 +10,7 @@ $bg-light: #f9fafb;
 $white: #ffffff;
 $transition: all 0.3s ease;
 
+
 .catalog-btn {
   display: flex;
   align-items: center;
@@ -42,14 +43,12 @@ $transition: all 0.3s ease;
     font-size: 16px;
   }
 
-  // Hover effect
   &:hover {
     background-color: darken(#10355b, 5%);
   }
 
-  // Animated icon change
   &.open {
-    background-color: #10355b; // same color, can change if you want
+    background-color: #10355b;
     .catalog-btn__icon {
       svg {
         transform: rotate(180deg);
@@ -58,50 +57,23 @@ $transition: all 0.3s ease;
   }
 }
 
+
+
 .catalog-menu {
-  position: relative;
   outline: none;
 
-//   &__trigger {
-//     display: flex;
-//     align-items: center;
-//     gap: 10px;
-//     border-radius: 20px;
-//     border: none;
-//     font-weight: 500;
-//     cursor: pointer;
-//     background-color: var(--primary-color);
-//     color: #ffffff;
-//     padding: 0;
-//     padding: 12px 16px;
-//     position: relative;
-//     z-index: 10;
-
-//     &__icon {
-//       .close-icon {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//       }
-//     }
-//     span {
-//       font-size: 18px;
-//       line-height: 117%;
-//       margin-top: 0;
-//     }
-//   }
-
   &__dropdown {
+    width: 100%;
+    height: 90vh;
     position: absolute;
-    top: 100%;
+    top: 50px;  
     left: 0;
-    margin-top: 0.5rem;
     background-color: $white;
-    border-radius: 20px;
+    border-radius:24px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
-    z-index: 50;
-    overflow: hidden;
-    // animation: slideDown 0.2s ease-out;
+    z-index: 9999;
+    overflow-y: auto;
+    margin-top: 30px;
 
     &__container {
       display: flex;
@@ -109,22 +81,24 @@ $transition: all 0.3s ease;
     }
 
     &__sidebar {
-      width: 20rem;
+      width: 43rem;
       background-color: $bg-light;
       border-right: 1px solid $border-color;
       overflow-y: auto;
-      max-height: 500px;
+      max-height: 100%;
 
       &__content {
         padding: 0.5rem 0;
+        height: 100%;
       }
     }
 
     &__content {
-      width: 37.5rem;
-      padding: 1.5rem;
-      max-height: 500px;
+      width: 100%;
+      padding: 2.5rem;
+      max-height: 100%;
       overflow-y: auto;
+
 
       &::-webkit-scrollbar {
         width: 6px;
@@ -146,13 +120,14 @@ $transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    padding: 1.5rem 1rem;
     background-color: transparent;
     color: $text-secondary;
     border: none;
     font-weight: 500;
     cursor: pointer;
     text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
       background-color: $white;
@@ -165,14 +140,17 @@ $transition: all 0.3s ease;
 
     &.active {
       background-color: $white;
-      color: $primary-color;
-
+      color: #000;
+      padding: 1.5rem 1rem;
       .catalog-menu__category__icon {
         color: $primary-color;
       }
 
       .catalog-menu__category__chevron {
         color: $primary-color;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
       }
     }
 
@@ -180,15 +158,15 @@ $transition: all 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 1.25rem;
-      height: 1.25rem;
+      width: 1.5rem;
+      height: 1.5rem;
       color: $text-light;
       flex-shrink: 0;
     }
 
     &__name {
       flex: 1;
-      font-size: 0.95rem;
+      font-size:18px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -199,11 +177,12 @@ $transition: all 0.3s ease;
       height: 1rem;
       color: $text-light;
       flex-shrink: 0;
+
     }
   }
 
   &__panel {
-    // animation: slideIn 0.2s ease-out;
+    animation: slideIn 0.2s ease-out;
 
     @keyframes slideIn {
       from {
@@ -230,8 +209,8 @@ $transition: all 0.3s ease;
       }
 
       .chevron-icon {
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
         color: $text-light;
         flex-shrink: 0;
       }
@@ -261,15 +240,17 @@ $transition: all 0.3s ease;
 
           a {
             display: inline-block;
-            font-size: 0.875rem;
+            font-size: 1rem;
             color: $text-secondary;
             text-decoration: none;
             padding: 0.25rem 0;
             margin: 0.5rem 0;
+            transition: color 0.4s ease-in-out;
 
-            // &:hover {
-            //   color: $primary-color;
-            // }
+
+            &:hover {
+              color: #000
+            }
           }
         }
       }
@@ -280,8 +261,11 @@ $transition: all 0.3s ease;
       align-items: center;
       justify-content: center;
       height: 100%;
+      width: 100%;
+
       color: $text-light;
-      font-size: 0.95rem;
+      font-size: 1.2rem;
+
     }
 
     &__more-btn {
@@ -292,19 +276,18 @@ $transition: all 0.3s ease;
       color: $primary-color;
       background: none;
       border: none;
-      font-size: 0.875rem;
+      font-size: 1.2rem;
       font-weight: 500;
       cursor: pointer;
       padding: 0;
-      background-color: red;
-
+transition: color 0.5s ease-in;
       &:hover {
-        color: #10355b;
+        color: #000;
       }
 
       .chevron-icon {
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
   }

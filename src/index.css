@@ -9,6 +9,8 @@
   max-width: 1480px;
   margin: 0 auto;
   padding: 0 10px;
+  position: relative ;
+  overflow: visible;
 }
 
 @font-face {

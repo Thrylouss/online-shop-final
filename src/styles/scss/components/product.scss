@@ -101,8 +101,12 @@
 
       &__disc {
         text-decoration: line-through;
-        font-size: 18px;
         color: var(--gray);
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
       }
 
       &__text {
@@ -132,20 +136,11 @@
       &__buy {
         font-size: 18px;
         color: var(--white);
-
-        &:hover {
-          background: var(--primary-dark);
-        }
-      }
-
-      &__basket:hover {
-        background: var(--primary-dark);
       }
     }
   }
 }
 
-/* ✅ Mobile Adaptation */
 @media (max-width: 480px) {
   .product {
     &__main {

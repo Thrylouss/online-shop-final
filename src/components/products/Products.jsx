@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import useProducts from "../../hooks/useProducts.jsx";
 import ProductCard from "./ProductCard.jsx";
 import arrowR from "../../assets/img/arrowR.svg";
-import prod from "../../assets/img/prod.png";
 import "../../styles/scss/components/products.scss";
 
 export default function Products({ title }) {

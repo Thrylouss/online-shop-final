@@ -151,7 +151,7 @@ export default function Form() {
             </div>
           </div>
           <div className="form__img">
-            <img src={formaImage} alt="formaImage" />
+            <img src={formaImage} alt="formaImage" id="sofa-image" />
           </div>
         </div>
       </div>

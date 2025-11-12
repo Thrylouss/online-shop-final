@@ -32,7 +32,7 @@ export default function ProductCard({ info }) {
       <div className="product__wrap">
         <div className="product__img">
           <Link to={`/product/${info.id}`}>
-           <img src={imgPlaceholder} alt="" />
+           <img src={imgPlaceholder} alt="image icon" />
           </Link>
 
           {info?.status && (
